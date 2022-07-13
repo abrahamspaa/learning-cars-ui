@@ -39,6 +39,8 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelectorAll('.collapse ul li')[0]?.textContent).toContain('Home');
     expect(compiled.querySelectorAll('.collapse ul li')[1]?.textContent).toContain('Cars');
-    expect(compiled.querySelectorAll('.collapse ul li')[2]?.textContent).toContain('Users');
+    expect(compiled.querySelectorAll('.collapse ul li')[2]?.textContent).toContain('Add A Car');
+    expect(compiled.querySelectorAll('.collapse ul li')[3]?.textContent).toContain('Login');
+    expect(compiled.querySelectorAll('.collapse ul li')[3]?.textContent).toContain('Chat');
   });
 });
