@@ -27,7 +27,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-## To create 
+### Step to create
+
+#### Create a new app 
 ```
 ng new learning-cars-ui
+```
+
+#### Added CSS framework bootstrap 
+- Install bootstrap 
+- Add css in this styles.css
+```
+@import "~bootstrap/dist/css/bootstrap.css";
 ```

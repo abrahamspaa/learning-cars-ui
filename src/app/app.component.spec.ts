@@ -20,16 +20,25 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'learning-cars-ui'`, () => {
+  it(`should have as title 'Zappy Cars'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('learning-cars-ui');
+    expect(app.title).toEqual('Zappy Cars');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('learning-cars-ui app is running!');
+    expect(compiled.querySelector('.navbar-brand')?.textContent).toContain('Zappy Cars');
+  });
+
+  it('should have nav bar', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelectorAll('.collapse ul li')[0]?.textContent).toContain('Home');
+    expect(compiled.querySelectorAll('.collapse ul li')[1]?.textContent).toContain('Cars');
+    expect(compiled.querySelectorAll('.collapse ul li')[2]?.textContent).toContain('Users');
   });
 });
